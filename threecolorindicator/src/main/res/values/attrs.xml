@@ -21,7 +21,7 @@
         <attr name="tci_min" format="integer" />
         <attr name="tci_firstColor" format="color" />
         <attr name="tci_secondColor" format="color" />
-        <attr name="tci_threeColor" format="color" />
+        <attr name="tci_thirdColor" format="color" />
         <attr name="tci_progressHeight" format="dimension" />
         <attr name="tci_value" format="integer" />
         <attr name="tci_firstRange" format="integer" />
@@ -29,7 +29,7 @@
         <attr name="tci_progressRadius" format="dimension" />
         <attr name="tci_firstText" format="string" />
         <attr name="tci_secondText" format="string" />
-        <attr name="tci_threeText" format="string" />
+        <attr name="tci_thirdText" format="string" />
         <attr name="tci_indicatorText" format="string" />
         <attr name="tci_indicatorTextColor" format="color" />
         <attr name="tci_indicatorTextSize" format="dimension" />

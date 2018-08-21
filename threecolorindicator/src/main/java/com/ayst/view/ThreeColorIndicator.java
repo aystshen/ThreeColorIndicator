@@ -42,8 +42,8 @@ public class ThreeColorIndicator extends View {
     // Second range color
     private int mSecondRangeColor = 0xfffffc00;
 
-    // Three range color
-    private int mThreeRangeColor = 0xff29fd2f;
+    // Third range color
+    private int mThirdRangeColor = 0xff29fd2f;
 
     // Progress bar height
     private float mProgressBarHeight = 20;
@@ -54,8 +54,8 @@ public class ThreeColorIndicator extends View {
     // Second Range Indicator text
     private String mSecondRangeText = "Second";
 
-    // Three Range Indicator text
-    private String mThreeRangeText = "Three";
+    // Third Range Indicator text
+    private String mThirdRangeText = "Third";
 
     // Indicator text
     private String mIndicatorText = "Text";
@@ -114,7 +114,7 @@ public class ThreeColorIndicator extends View {
 
         mFirstRangeColor = a.getColor(R.styleable.ThreeColorIndicator_tci_firstColor, mFirstRangeColor);
         mSecondRangeColor = a.getColor(R.styleable.ThreeColorIndicator_tci_secondColor, mSecondRangeColor);
-        mThreeRangeColor = a.getColor(R.styleable.ThreeColorIndicator_tci_threeColor, mThreeRangeColor);
+        mThirdRangeColor = a.getColor(R.styleable.ThreeColorIndicator_tci_thirdColor, mThirdRangeColor);
         mMax = a.getInteger(R.styleable.ThreeColorIndicator_tci_max, mMax);
         mMin = a.getInteger(R.styleable.ThreeColorIndicator_tci_min, mMin);
         mProgressBarHeight = a.getDimension(R.styleable.ThreeColorIndicator_tci_progressHeight, mProgressBarHeight);
@@ -124,7 +124,7 @@ public class ThreeColorIndicator extends View {
         mProgressRadius = a.getDimension(R.styleable.ThreeColorIndicator_tci_progressRadius, mProgressRadius);
         mFirstRangeText = a.getString(R.styleable.ThreeColorIndicator_tci_firstText);
         mSecondRangeText = a.getString(R.styleable.ThreeColorIndicator_tci_secondText);
-        mThreeRangeText = a.getString(R.styleable.ThreeColorIndicator_tci_threeText);
+        mThirdRangeText = a.getString(R.styleable.ThreeColorIndicator_tci_thirdText);
         mIndicatorText = a.getString(R.styleable.ThreeColorIndicator_tci_indicatorText);
         mIndicatorTextColor = a.getColor(R.styleable.ThreeColorIndicator_tci_indicatorTextColor, mIndicatorTextColor);
         mIndicatorTextSize = a.getDimension(R.styleable.ThreeColorIndicator_tci_indicatorTextSize, mIndicatorTextSize);
@@ -151,8 +151,8 @@ public class ThreeColorIndicator extends View {
         mPaint.reset();
         int range = mMax - mMin;
 
-        // Drawing three range progress
-        mPaint.setColor(mThreeRangeColor);
+        // Drawing third range progress
+        mPaint.setColor(mThirdRangeColor);
         RectF rect = new RectF();
         rect.top = mIndicatorTextHeight + dp2px(5);
         rect.left = mIndicatorTextWidth / 2;
@@ -166,9 +166,9 @@ public class ThreeColorIndicator extends View {
         rect.right = (float) colorBarWidth * (mFirstRange + mSecondRange) / 100 + mIndicatorTextWidth / 2;
         canvas.drawRoundRect(rect, mProgressRadius, mProgressRadius, mPaint);
 
-        // Drawing three range text
-        mIndicatorTextPaint.setColor(mThreeRangeColor);
-        canvas.drawText(mThreeRangeText, rect.right, mIndicatorTextHeight,
+        // Drawing third range text
+        mIndicatorTextPaint.setColor(mThirdRangeColor);
+        canvas.drawText(mThirdRangeText, rect.right, mIndicatorTextHeight,
                 mIndicatorTextPaint);
 
         // Drawing first range progress
@@ -193,7 +193,7 @@ public class ThreeColorIndicator extends View {
         } else if (valuePer < mFirstRange + mSecondRange) {
             mPaint.setColorFilter(new PorterDuffColorFilter(mSecondRangeColor, PorterDuff.Mode.SRC_IN));
         } else {
-            mPaint.setColorFilter(new PorterDuffColorFilter(mThreeRangeColor, PorterDuff.Mode.SRC_IN));
+            mPaint.setColorFilter(new PorterDuffColorFilter(mThirdRangeColor, PorterDuff.Mode.SRC_IN));
         }
         float IndicatorCenter = (float) colorBarWidth * valuePer / 100 + mIndicatorTextWidth / 2;
         float textWidth = mIndicatorTextPaint.measureText(mIndicatorText);
@@ -295,12 +295,12 @@ public class ThreeColorIndicator extends View {
         this.mSecondRangeColor = mSecondRangeColor;
     }
 
-    public int getThreeRangeColor() {
-        return mThreeRangeColor;
+    public int getThirdRangeColor() {
+        return mThirdRangeColor;
     }
 
-    public void setThreeRangeColor(int mThreeRangeColor) {
-        this.mThreeRangeColor = mThreeRangeColor;
+    public void setThirdRangeColor(int mThirdRangeColor) {
+        this.mThirdRangeColor = mThirdRangeColor;
     }
 
     public float getProgressBarHeight() {

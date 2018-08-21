@@ -6,7 +6,7 @@
 This is an Android tri-color progress indicator View.
 
 ## Preview
-![image](screenshots/device-2018-08-20-155316.png)
+![image](screenshots/device-2018-08-21-093142.png)
 
 ## Using ThreeColorIndicator in your application
 ### ADT	
@@ -46,7 +46,7 @@ If you decide to use ThreeColorIndicator as a view, you can define it in your xm
         app:tci_max="100"
         app:tci_firstColor="@color/red"
         app:tci_secondColor="@color/yellow"
-        app:tci_threeColor="@color/green"
+        app:tci_thirdColor="@color/green"
         app:tci_progressHeight="20dp"
         app:tci_progressRadius="0px"
         app:tci_firstRange="30"
@@ -54,7 +54,7 @@ If you decide to use ThreeColorIndicator as a view, you can define it in your xm
         app:tci_value="80"
         app:tci_firstText="Poor"
         app:tci_secondText="Fair"
-        app:tci_threeText="Good"
+        app:tci_thirdText="Good"
         app:tci_indicatorText="-20dBm"
         app:tci_indicatorTextColor="@android:color/white"
         app:tci_indicatorTextSize="12sp"
@@ -67,7 +67,7 @@ NOTE:
 
 * `tci_firstColor` - First range color
 * `tci_secondColor` - Second range color
-* `tci_threeColor` - Three range color
+* `tci_thirdColor` - Third range color
 * `tci_max` - Max value
 * `tci_min` - Min value
 * `tci_value` - Value
@@ -77,7 +77,7 @@ NOTE:
 * `dbv_secondRange` - This is a percentage, starting with the first range, showing second color within this percentage
 * `tci_firstText` - First Range indicator text
 * `tci_secondText` - Second Range indicator text
-* `tci_threeText` - Three Range indicator text
+* `tci_thirdText` - Third Range indicator text
 * `tci_indicatorText` - Indicator text
 * `tci_indicatorTextColor` - Indicator text color
 * `tci_indicatorTextSize` - Indicator text size

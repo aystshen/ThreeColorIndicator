@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.ayst.view;
+package com.ayst.tci;
 
 import android.content.Context;
 import android.content.res.Resources;

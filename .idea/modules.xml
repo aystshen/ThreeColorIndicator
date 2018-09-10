@@ -5,9 +5,10 @@
       <module fileurl="file://$PROJECT_DIR$/ThreeColorIndicator.iml" filepath="$PROJECT_DIR$/ThreeColorIndicator.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://D:\code\MatrixView\example\app.iml" filepath="D:\code\MatrixView\example\app.iml" />
+      <module fileurl="file://D:\code\ThreeColorIndicator\threecolorindicator\dashboardview.iml" filepath="D:\code\ThreeColorIndicator\threecolorindicator\dashboardview.iml" />
       <module fileurl="file://D:\code\ThreeColorIndicator\app\example.iml" filepath="D:\code\ThreeColorIndicator\app\example.iml" />
       <module fileurl="file://D:\code\ThreeColorIndicator\dashboardview\matrixview.iml" filepath="D:\code\ThreeColorIndicator\dashboardview\matrixview.iml" />
-      <module fileurl="file://$PROJECT_DIR$/threecolorindicator/dashboardview.iml" filepath="$PROJECT_DIR$/threecolorindicator/dashboardview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/threecolorindicator/threecolorindicator.iml" filepath="$PROJECT_DIR$/threecolorindicator/threecolorindicator.iml" />
     </modules>
   </component>
 </project>

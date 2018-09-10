@@ -1,6 +1,6 @@
 # ThreeColorIndicator
 
-[![](https://img.shields.io/badge/downloads-20k-brightgreen.svg)](https://bintray.com/hbshen/maven/ThreeColorIndicator)
+ [![Download](https://api.bintray.com/packages/hbshen/maven/ThreeColorIndicator/images/download.svg) ](https://bintray.com/hbshen/maven/ThreeColorIndicator/_latestVersion)
 [![](https://img.shields.io/badge/demo-1.0-orange.svg)](https://fir.im/a7pe)
 
 This is an Android tri-color progress indicator View.
@@ -16,7 +16,7 @@ This is an Android tri-color progress indicator View.
 Add dependencies in build.gradle of your module:  
 
 	dependencies {
-		compile 'com.ayst.view:threecolorindicator:1.0.1'
+		compile 'com.ayst.tci:threecolorindicator:1.0.3'
 	}
 
 ## Usage

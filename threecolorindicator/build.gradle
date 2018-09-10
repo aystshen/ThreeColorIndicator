@@ -18,11 +18,11 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
-version = "1.0.2"
+version = "1.0.3"
 
 def siteUrl = 'https://github.com/aystshen/ThreeColorIndicator'     // project homepage
 def gitUrl = 'https://github.com/aystshen/ThreeColorIndicator.git'  // project git
-group = "com.ayst.view"
+group = "com.ayst.tci"
 
 android {
     compileSdkVersion 26
@@ -30,8 +30,8 @@ android {
     defaultConfig {
         minSdkVersion 18
         targetSdkVersion 26
-        versionCode 3
-        versionName "1.0.2"
+        versionCode 4
+        versionName "1.0.3"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }

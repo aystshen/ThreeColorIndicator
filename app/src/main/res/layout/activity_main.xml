@@ -17,7 +17,7 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <com.ayst.view.ThreeColorIndicator
+            <com.ayst.tci.ThreeColorIndicator
                 android:id="@+id/indicator"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
                 app:tci_indicatorDrawable="@mipmap/ic_three_color_indicator"
                 />
 
-            <com.ayst.view.ThreeColorIndicator
+            <com.ayst.tci.ThreeColorIndicator
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -67,7 +67,7 @@
                 app:tci_indicatorDrawable="@mipmap/ic_three_color_indicator"
                 />
 
-            <com.ayst.view.ThreeColorIndicator
+            <com.ayst.tci.ThreeColorIndicator
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -92,7 +92,7 @@
                 app:tci_indicatorDrawable="@mipmap/ic_three_color_indicator_2"
                 />
 
-            <com.ayst.view.ThreeColorIndicator
+            <com.ayst.tci.ThreeColorIndicator
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"

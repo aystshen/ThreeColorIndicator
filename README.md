@@ -73,8 +73,8 @@ NOTE:
 * `tci_value` - Value
 * `tci_progressHeight` - Progress bar height
 * `tci_progressRadius` - Progress radius
-* `dbv_firstRange` - This is a percentage, starting with the minimum value, showing first color within this percentage
-* `dbv_secondRange` - This is a percentage, starting with the first range, showing second color within this percentage
+* `tci_firstRange` - This is a percentage, starting with the minimum value, showing first color within this percentage
+* `tci_secondRange` - This is a percentage, starting with the first range, showing second color within this percentage
 * `tci_firstText` - First Range indicator text
 * `tci_secondText` - Second Range indicator text
 * `tci_thirdText` - Third Range indicator text

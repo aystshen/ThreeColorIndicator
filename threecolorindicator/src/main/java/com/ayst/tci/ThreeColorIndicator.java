@@ -150,6 +150,8 @@ public class ThreeColorIndicator extends View {
 
         mPaint.reset();
         int range = mMax - mMin;
+        float firstPosX, secondPosX, thirdPosX;
+        float firstTextWidth, secondTextWidth, thirdTextWidth, textPosX;
 
         // Drawing third range progress
         mPaint.setColor(mThirdRangeColor);
@@ -159,6 +161,8 @@ public class ThreeColorIndicator extends View {
         rect.right = getWidth() - mIndicatorTextWidth / 2;
         rect.bottom = rect.top + mProgressBarHeight;
         canvas.drawRoundRect(rect, mProgressRadius, mProgressRadius, mPaint);
+        firstPosX = rect.left;
+        thirdPosX = rect.right;
 
         // Drawing second range progress
         float colorBarWidth = getWidth() - mIndicatorTextWidth;
@@ -166,24 +170,31 @@ public class ThreeColorIndicator extends View {
         rect.right = (float) colorBarWidth * (mFirstRange + mSecondRange) / 100 + mIndicatorTextWidth / 2;
         canvas.drawRoundRect(rect, mProgressRadius, mProgressRadius, mPaint);
 
-        // Drawing third range text
-        mIndicatorTextPaint.setColor(mThirdRangeColor);
-        canvas.drawText(mThirdRangeText, rect.right, mIndicatorTextHeight,
-                mIndicatorTextPaint);
-
         // Drawing first range progress
         mPaint.setColor(mFirstRangeColor);
         rect.right = (float) colorBarWidth * mFirstRange / 100 + mIndicatorTextWidth / 2;
         canvas.drawRoundRect(rect, mProgressRadius, mProgressRadius, mPaint);
-
-        // Drawing second range text
-        mIndicatorTextPaint.setColor(mSecondRangeColor);
-        canvas.drawText(mSecondRangeText, rect.right, mIndicatorTextHeight,
-                mIndicatorTextPaint);
+        secondPosX = rect.right;
 
         // Drawing first range text
         mIndicatorTextPaint.setColor(mFirstRangeColor);
-        canvas.drawText(mFirstRangeText, rect.left, mIndicatorTextHeight,
+        canvas.drawText(mFirstRangeText, firstPosX, mIndicatorTextHeight,
+                mIndicatorTextPaint);
+
+        // Drawing third range text
+        thirdTextWidth = mIndicatorTextPaint.measureText(mThirdRangeText);
+        thirdPosX = thirdPosX-thirdTextWidth;
+        mIndicatorTextPaint.setColor(mThirdRangeColor);
+        canvas.drawText(mThirdRangeText, thirdPosX, mIndicatorTextHeight,
+                mIndicatorTextPaint);
+
+        // Drawing second range text
+        firstTextWidth = mIndicatorTextPaint.measureText(mFirstRangeText);
+        secondTextWidth = mIndicatorTextPaint.measureText(mSecondRangeText);
+        textPosX = Math.max(firstPosX+firstTextWidth+dp2px(3), secondPosX);
+        textPosX = Math.min(textPosX, thirdPosX-secondTextWidth-dp2px(3));
+        mIndicatorTextPaint.setColor(mSecondRangeColor);
+        canvas.drawText(mSecondRangeText, textPosX, mIndicatorTextHeight,
                 mIndicatorTextPaint);
 
         // Drawing Indicator icon
